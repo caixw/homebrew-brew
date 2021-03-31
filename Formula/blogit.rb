@@ -5,25 +5,25 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caixw/blogit/releases/download/v1.3.1/blogit_1.3.1_macOS_amd64.tar.gz"
-    sha256 "a1343167567aa94a1cd165681c879041a59205cd3bef51e162b8f293e563b9ca"
+    url "https://github.com/caixw/blogit/releases/download/v1.3.2/blogit_1.3.2_macOS_amd64.tar.gz"
+    sha256 "78ee6849955fe1a770ebb963c57ed248444344a4f369fd97cef6a7f0a8afce5d"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caixw/blogit/releases/download/v1.3.1/blogit_1.3.1_macOS_arm64.tar.gz"
-    sha256 "ae067f323797d55c1c1747ce6050950816eb850352e42e51e6001d0efc01b56f"
+    url "https://github.com/caixw/blogit/releases/download/v1.3.2/blogit_1.3.2_macOS_arm64.tar.gz"
+    sha256 "838f9e5b17abd368542b8490dbc74419b31d69a31cfbd7aa9c1c5233b68702ac"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caixw/blogit/releases/download/v1.3.1/blogit_1.3.1_linux_amd64.tar.gz"
-    sha256 "856e5d59a1d57c9d058f0ee7921e2736b00f59347005e1be5c1297f885646618"
+    url "https://github.com/caixw/blogit/releases/download/v1.3.2/blogit_1.3.2_linux_amd64.tar.gz"
+    sha256 "bff023daa581a24d7bc8290dda29fedb695f285e4cf8ccf0047cfb2cd4e08dd6"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caixw/blogit/releases/download/v1.3.1/blogit_1.3.1_linux_arm64.tar.gz"
-    sha256 "3836a5f40c79f9688592371188f3fd8d4521713fd618626b49b59b363c59d9e8"
+    url "https://github.com/caixw/blogit/releases/download/v1.3.2/blogit_1.3.2_linux_arm64.tar.gz"
+    sha256 "44822484acf26351c7a9c590b70c41e71a89cb7aba83b7827ca23bbbe1fc5a0c"
   end
 
   def install
