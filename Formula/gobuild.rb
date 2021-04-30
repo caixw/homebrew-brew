@@ -5,25 +5,25 @@
 class Gobuild < Formula
   desc "Go 热编译工具"
   homepage "https://github.com/caixw/gobuild"
-  version "0.9.5"
+  version "0.9.6"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caixw/gobuild/releases/download/v0.9.5/gobuild_0.9.5_macOS_amd64.tar.gz"
-    sha256 "4a1a31cf544ce88848d61cbd102101aac483873eec6401fe005a4d1a99c8efaf"
+    url "https://github.com/caixw/gobuild/releases/download/v0.9.6/gobuild_0.9.6_macOS_amd64.tar.gz"
+    sha256 "18ef52c4814970660c7a11eb08fc6d350bc41822e04ec2c4b31fbb863d686840"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caixw/gobuild/releases/download/v0.9.5/gobuild_0.9.5_macOS_arm64.tar.gz"
-    sha256 "120b7f7868d2cf10a7616fa6cb1a8a6cbd04bc47c8698b7b004c101c196e23ec"
+    url "https://github.com/caixw/gobuild/releases/download/v0.9.6/gobuild_0.9.6_macOS_arm64.tar.gz"
+    sha256 "852f45effa3b585b7aef0388f702b86e5681841cca2a11b79de72847b71ded75"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caixw/gobuild/releases/download/v0.9.5/gobuild_0.9.5_linux_amd64.tar.gz"
-    sha256 "126f4e40b2cf51069a8cd21b47a82e6baaae14b9ab1f558d89aaf1181637fc58"
+    url "https://github.com/caixw/gobuild/releases/download/v0.9.6/gobuild_0.9.6_linux_amd64.tar.gz"
+    sha256 "d034f42d2c671953ea049b916ac8a89016f9685ba8e76cf94377d8bf99199878"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caixw/gobuild/releases/download/v0.9.5/gobuild_0.9.5_linux_arm64.tar.gz"
-    sha256 "f4039f064a282c9fc203317fe298df15970ef48edfcfc5e97a67417a4aa41e30"
+    url "https://github.com/caixw/gobuild/releases/download/v0.9.6/gobuild_0.9.6_linux_arm64.tar.gz"
+    sha256 "64c81cdba0e8ed647d7e7a9d90749c380f0d202e36e8e6bbd88242885f99d0b8"
   end
 
   def install
