@@ -5,29 +5,29 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "1.6.0"
+  version "1.6.1"
   license "MIT"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_macOS_amd64.tar.gz"
-      sha256 "f2ab2e1598496de6cae64f5ccd69dba8ef1b80deb1e3118a46dd67b47c29e612"
+      url "https://github.com/caixw/blogit/releases/download/v1.6.1/blogit_1.6.1_macOS_amd64.tar.gz"
+      sha256 "7e0c373d812ab770f7a80c28ad610d92ad25f002806666b6c47c16b23e524fb8"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_macOS_arm64.tar.gz"
-      sha256 "2f5654fcdf76bfffbacd9e3fb0ccdb5e573aa64ea02d7216f9140397efa26418"
+      url "https://github.com/caixw/blogit/releases/download/v1.6.1/blogit_1.6.1_macOS_arm64.tar.gz"
+      sha256 "aec8dbed88b663a2a998e434833f64ae8b8fd97960394f7153a45f6aff10e6c3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_linux_amd64.tar.gz"
-      sha256 "49478ab2c7c3b2f7a72a6e173c186a001549182219ba761f4cf4885cefeb5828"
+      url "https://github.com/caixw/blogit/releases/download/v1.6.1/blogit_1.6.1_linux_amd64.tar.gz"
+      sha256 "0c91f88d212de4c41feaacc1e5a79c1c8aa66a2d747a1cd721d99973126f93a7"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_linux_arm64.tar.gz"
-      sha256 "6f0ad0233ba180aeebf9526de6c3ef9f18e1687195f4c37f708511b855e222dd"
+      url "https://github.com/caixw/blogit/releases/download/v1.6.1/blogit_1.6.1_linux_arm64.tar.gz"
+      sha256 "1caa1838e8d25b3a282d158d38994065eb6a33aa9230e042b371800476a5836b"
     end
   end
 
