@@ -5,25 +5,30 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "1.5.3"
+  version "1.6.0"
   license "MIT"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/caixw/blogit/releases/download/v1.5.3/blogit_1.5.3_macOS_amd64.tar.gz"
-    sha256 "5e2664364f9d86dc78715166ca6fa47f0560673baee090de626edb89ef3fd439"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_macOS_amd64.tar.gz"
+      sha256 "f2ab2e1598496de6cae64f5ccd69dba8ef1b80deb1e3118a46dd67b47c29e612"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_macOS_arm64.tar.gz"
+      sha256 "2f5654fcdf76bfffbacd9e3fb0ccdb5e573aa64ea02d7216f9140397efa26418"
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/caixw/blogit/releases/download/v1.5.3/blogit_1.5.3_macOS_arm64.tar.gz"
-    sha256 "87b6c56f47fe2137a670f86a5a73d26aebf2bbff173f72808767c608699e12e4"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/caixw/blogit/releases/download/v1.5.3/blogit_1.5.3_linux_amd64.tar.gz"
-    sha256 "c0be6ac7dfbc53e9c60c3c1ae3f36456f77523dadcb12362f9797783afa2093a"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/caixw/blogit/releases/download/v1.5.3/blogit_1.5.3_linux_arm64.tar.gz"
-    sha256 "9776439527a782f2b92a46b515e56d97e50c9590429ca5e32a668034c36e8296"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_linux_amd64.tar.gz"
+      sha256 "49478ab2c7c3b2f7a72a6e173c186a001549182219ba761f4cf4885cefeb5828"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caixw/blogit/releases/download/v1.6.0/blogit_1.6.0_linux_arm64.tar.gz"
+      sha256 "6f0ad0233ba180aeebf9526de6c3ef9f18e1687195f4c37f708511b855e222dd"
+    end
   end
 
   def install
