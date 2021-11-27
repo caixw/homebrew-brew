@@ -5,33 +5,44 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "2.2.0"
+  version "2.2.1"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.0/blogit_2.2.0_macOS_amd64.tar.gz"
-      sha256 "17ee29561c7c9edd944bbb5d3b17c6b735f66a9b0745cf354ed6f208b3b9b918"
-    end
     if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.0/blogit_2.2.0_macOS_arm64.tar.gz"
-      sha256 "af9c3a4f937013f8a33c09b57b786a5f7db05499baaf78092379c57d963c2475"
+      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_macOS_arm64.tar.gz"
+      sha256 "bf59801b7ebb45489072c2d4ebf10f652db6eafbcee95eeab990b5402a0872b6"
+
+      def install
+        bin.install "blogit"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_macOS_amd64.tar.gz"
+      sha256 "1a68d5c0cdc479c34d6fd264ccba07ae049410334fa946e589c9f8988932882c"
+
+      def install
+        bin.install "blogit"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.0/blogit_2.2.0_linux_amd64.tar.gz"
-      sha256 "ba5b645e1e6212c3e5e79fe89e172ac22c74c54a3a19a63cadbb711bf861ae23"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.0/blogit_2.2.0_linux_arm64.tar.gz"
-      sha256 "40811a4d103bc2f20762a4a89375fc70db4d4532adaffb77e3649e3343d2b2d2"
-    end
-  end
+      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_linux_arm64.tar.gz"
+      sha256 "2e87ba38657dd5c442d8ece015e3df4d256f4b839efe4740479ff81fa4a2dd45"
 
-  def install
-    bin.install "blogit"
+      def install
+        bin.install "blogit"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_linux_amd64.tar.gz"
+      sha256 "4c5589cf4330cb03102418d2e15b355d04ba60e751bce934d4ca1f4578798786"
+
+      def install
+        bin.install "blogit"
+      end
+    end
   end
 end
