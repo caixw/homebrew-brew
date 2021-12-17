@@ -5,21 +5,21 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "2.2.1"
+  version "2.3.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_macOS_arm64.tar.gz"
-      sha256 "bf59801b7ebb45489072c2d4ebf10f652db6eafbcee95eeab990b5402a0872b6"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_macOS_amd64.tar.gz"
+      sha256 "ac333fde3f64433e169dc4b9f2116db9fa8081f01179765225cae4812816e672"
 
       def install
         bin.install "blogit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_macOS_amd64.tar.gz"
-      sha256 "1a68d5c0cdc479c34d6fd264ccba07ae049410334fa946e589c9f8988932882c"
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_macOS_arm64.tar.gz"
+      sha256 "e2c72b9544f553e9624c1b0bc180d0b1093f3b6fff662801a25ce48da5c226bf"
 
       def install
         bin.install "blogit"
@@ -29,16 +29,16 @@ class Blogit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_linux_arm64.tar.gz"
-      sha256 "2e87ba38657dd5c442d8ece015e3df4d256f4b839efe4740479ff81fa4a2dd45"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_linux_arm64.tar.gz"
+      sha256 "907fc5ba8f7a5f735490cb66d1c03ae566aca9ddadff7245147ba89876481f9f"
 
       def install
         bin.install "blogit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.2.1/blogit_2.2.1_linux_amd64.tar.gz"
-      sha256 "4c5589cf4330cb03102418d2e15b355d04ba60e751bce934d4ca1f4578798786"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_linux_amd64.tar.gz"
+      sha256 "f7b8c7185ffc0dd052d8b5e7ee51bd0ec60e859229719e4efe65ff3cc0dff7d6"
 
       def install
         bin.install "blogit"
