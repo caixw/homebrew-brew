@@ -5,21 +5,21 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "2.3.0"
+  version "2.3.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_macOS_amd64.tar.gz"
-      sha256 "ac333fde3f64433e169dc4b9f2116db9fa8081f01179765225cae4812816e672"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_macOS_amd64.tar.gz"
+      sha256 "202997b5193e14e551ce52892545f5930c8991a6845e4276c15ef8f95a4ac952"
 
       def install
         bin.install "blogit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_macOS_arm64.tar.gz"
-      sha256 "e2c72b9544f553e9624c1b0bc180d0b1093f3b6fff662801a25ce48da5c226bf"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_macOS_arm64.tar.gz"
+      sha256 "0c42e30664b68a90571629ca92296d1fce615afabfe35ddfe8a1fdb8f6e78194"
 
       def install
         bin.install "blogit"
@@ -29,16 +29,16 @@ class Blogit < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_linux_arm64.tar.gz"
-      sha256 "907fc5ba8f7a5f735490cb66d1c03ae566aca9ddadff7245147ba89876481f9f"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_linux_arm64.tar.gz"
+      sha256 "d161a0a1c98452ec2a72fd8b1fd95c79102e9ab8d00e0c097a112a16eafa6c9a"
 
       def install
         bin.install "blogit"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.0/blogit_2.3.0_linux_amd64.tar.gz"
-      sha256 "f7b8c7185ffc0dd052d8b5e7ee51bd0ec60e859229719e4efe65ff3cc0dff7d6"
+      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_linux_amd64.tar.gz"
+      sha256 "1b0b311828da9b1a640398d8f75976686e432a0e6e3503776ba81c6ae2fd3980"
 
       def install
         bin.install "blogit"
