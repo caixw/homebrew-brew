@@ -5,21 +5,21 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "2.3.1"
+  version "2.4.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_macOS_amd64.tar.gz"
-      sha256 "202997b5193e14e551ce52892545f5930c8991a6845e4276c15ef8f95a4ac952"
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.0/blogit_2.4.0_macOS_arm64.tar.gz"
+      sha256 "bb5e938b36ddfc37e7056d19af6e91749db22988de1843d99a816ad7b23d6a7f"
 
       def install
         bin.install "blogit"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_macOS_arm64.tar.gz"
-      sha256 "0c42e30664b68a90571629ca92296d1fce615afabfe35ddfe8a1fdb8f6e78194"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.0/blogit_2.4.0_macOS_amd64.tar.gz"
+      sha256 "141b9d21fecadeea2cd4947c754a99f8017c4180d6c964292f0b9535733c12ea"
 
       def install
         bin.install "blogit"
@@ -28,17 +28,17 @@ class Blogit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_linux_arm64.tar.gz"
-      sha256 "d161a0a1c98452ec2a72fd8b1fd95c79102e9ab8d00e0c097a112a16eafa6c9a"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.0/blogit_2.4.0_linux_amd64.tar.gz"
+      sha256 "d34f54a290c314f3a1a1538af533c400e5c5edc23bde332ebbffff4f4f366b32"
 
       def install
         bin.install "blogit"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.3.1/blogit_2.3.1_linux_amd64.tar.gz"
-      sha256 "1b0b311828da9b1a640398d8f75976686e432a0e6e3503776ba81c6ae2fd3980"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.0/blogit_2.4.0_linux_arm64.tar.gz"
+      sha256 "61c662bb71766b5d1be09b9d42d6bc0eaf516507eb3f23c6c38eff4f7f9e5498"
 
       def install
         bin.install "blogit"
