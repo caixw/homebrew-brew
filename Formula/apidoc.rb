@@ -5,21 +5,21 @@
 class Apidoc < Formula
   desc "RESTful API 文档生成工具"
   homepage "https://apidoc.tools"
-  version "7.2.3"
+  version "7.2.4"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/apidoc/releases/download/v7.2.3/apidoc_7.2.3_macOS_amd64.tar.gz"
-      sha256 "075907a31d6e28b148022c5cef086ce3a3b28ad5ffcc03e9aeed41a06e7244d9"
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/apidoc/releases/download/v7.2.4/apidoc_7.2.4_macOS_arm64.tar.gz"
+      sha256 "320f8d1e3f63cde81929454e6315bd267483995151febaae66484899d9221915"
 
       def install
         bin.install "apidoc"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/caixw/apidoc/releases/download/v7.2.3/apidoc_7.2.3_macOS_arm64.tar.gz"
-      sha256 "8aefdd64cca1902fbe498bfdfe88bed52d86322341f0da0cc05798134ba7035c"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/apidoc/releases/download/v7.2.4/apidoc_7.2.4_macOS_amd64.tar.gz"
+      sha256 "0e7066254b5730a07863d1daafd12055662538b721e872d7867624560baebaa9"
 
       def install
         bin.install "apidoc"
@@ -29,16 +29,16 @@ class Apidoc < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/apidoc/releases/download/v7.2.3/apidoc_7.2.3_linux_arm64.tar.gz"
-      sha256 "4581fdab5a7533fc64296e0dbb46fca9ed8a3aebfa952ee40733b4871ae195ee"
+      url "https://github.com/caixw/apidoc/releases/download/v7.2.4/apidoc_7.2.4_linux_arm64.tar.gz"
+      sha256 "83e61d957b06b6e1ca14677c0b62f1f67811e5f3cfa8105c8bac7a1d5639094f"
 
       def install
         bin.install "apidoc"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/apidoc/releases/download/v7.2.3/apidoc_7.2.3_linux_amd64.tar.gz"
-      sha256 "437d74ff69fb8cb2b4e37fa0e65510356d543f106ed4061193ee9f4eca04a020"
+      url "https://github.com/caixw/apidoc/releases/download/v7.2.4/apidoc_7.2.4_linux_amd64.tar.gz"
+      sha256 "5d096003f2dc35470ad90ddafbf3a0e36b71fa9dbd2ef61aa17e6940e0d3a0f3"
 
       def install
         bin.install "apidoc"
