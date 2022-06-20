@@ -5,21 +5,21 @@
 class Blogit < Formula
   desc "静态博客生成工具"
   homepage "https://github.com/caixw/blogit"
-  version "2.4.1"
+  version "2.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.4.1/blogit_2.4.1_macOS_amd64.tar.gz"
-      sha256 "a88e1f0b0b470eee622cc5f1707dee2bd9b22c65e6f75c9a2c0937155a8674f0"
+      url "https://github.com/caixw/blogit/releases/download/v2.4.2/blogit_2.4.2_macOS_amd64.tar.gz"
+      sha256 "c07c5fad29155aba579fe3c67f871a9c03d81caac77bc3bd2f916264852ed11d"
 
       def install
         bin.install "blogit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/caixw/blogit/releases/download/v2.4.1/blogit_2.4.1_macOS_arm64.tar.gz"
-      sha256 "47303b144e829a820580df778fb29772d98877f94fd3f17495370624bd58d5bd"
+      url "https://github.com/caixw/blogit/releases/download/v2.4.2/blogit_2.4.2_macOS_arm64.tar.gz"
+      sha256 "2f1dd07089dc7066a37e7747589b435b38108dc47ddfffd5d95c745e1fd4aa43"
 
       def install
         bin.install "blogit"
@@ -28,17 +28,17 @@ class Blogit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/blogit/releases/download/v2.4.1/blogit_2.4.1_linux_amd64.tar.gz"
-      sha256 "a56084f3b88b31fd39b7a48b675204c182c1416c4616b9699aa704ea51d14b88"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.2/blogit_2.4.2_linux_arm64.tar.gz"
+      sha256 "8c327fa5f43fe71175b0870bba03cfc8816562853de291560c8bc5f89cfdfe8c"
 
       def install
         bin.install "blogit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/blogit/releases/download/v2.4.1/blogit_2.4.1_linux_arm64.tar.gz"
-      sha256 "3e93a77ebf0f8d51663d21d6869a1d6fcbc04ea00c3f90b9e9a0243eb88f73a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/blogit/releases/download/v2.4.2/blogit_2.4.2_linux_amd64.tar.gz"
+      sha256 "629943450cbf02ae31dcfeb0f42dab10f329736c5cee840d07d19f7183267045"
 
       def install
         bin.install "blogit"
