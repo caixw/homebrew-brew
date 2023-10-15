@@ -5,21 +5,21 @@
 class Gobuild < Formula
   desc "Go 热编译工具"
   homepage "https://github.com/caixw/gobuild"
-  version "1.6.4"
+  version "1.7.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/gobuild/releases/download/v1.6.4/gobuild_1.6.4_darwin_amd64.tar.gz"
-      sha256 "970b07f18173f16f53f48b8e9339e9163cfd778f03d1140ab556562350221448"
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_darwin_arm64.tar.gz"
+      sha256 "8ea0a67c23ea0b6f0ac40f4f6a1f51009e881b796889b65671dee00921b2233a"
 
       def install
         bin.install "gobuild"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/caixw/gobuild/releases/download/v1.6.4/gobuild_1.6.4_darwin_arm64.tar.gz"
-      sha256 "4b6d9d25a87e945730bfea6ba8ffdec708705159de0155f3f20f1f8cb0041aa9"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_darwin_amd64.tar.gz"
+      sha256 "86713cdc52a4f2769594161d04a4d5935852ce8c45f64e368aa644c6f12be7f8"
 
       def install
         bin.install "gobuild"
@@ -28,17 +28,17 @@ class Gobuild < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/gobuild/releases/download/v1.6.4/gobuild_1.6.4_linux_amd64.tar.gz"
-      sha256 "448fa7ffe436e8869bd899f323f95aae4827ca31897183e2182bd52777402854"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_linux_arm64.tar.gz"
+      sha256 "26039ed441c2c82497273dec94e0cb403ad9e087d180e1f26a7b0f77048823cc"
 
       def install
         bin.install "gobuild"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/gobuild/releases/download/v1.6.4/gobuild_1.6.4_linux_arm64.tar.gz"
-      sha256 "74aeae546973f6132b6081938bce0975818b1ab347ce7d9fff664b9ffb49c04c"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_linux_amd64.tar.gz"
+      sha256 "3618de4015c477a4c12ddf34c3a9b1572b9c98fd94e4e4d84b941664458380e4"
 
       def install
         bin.install "gobuild"
