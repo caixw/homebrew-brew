@@ -5,21 +5,21 @@
 class Gobuild < Formula
   desc "Go 热编译工具"
   homepage "https://github.com/caixw/gobuild"
-  version "1.7.0"
+  version "1.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_darwin_arm64.tar.gz"
-      sha256 "8ea0a67c23ea0b6f0ac40f4f6a1f51009e881b796889b65671dee00921b2233a"
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.1/gobuild_1.7.1_darwin_arm64.tar.gz"
+      sha256 "93bd92f833a53b1d02adf2478423bbcddb4b03972086d1f909457d8886207992"
 
       def install
         bin.install "gobuild"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_darwin_amd64.tar.gz"
-      sha256 "86713cdc52a4f2769594161d04a4d5935852ce8c45f64e368aa644c6f12be7f8"
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.1/gobuild_1.7.1_darwin_amd64.tar.gz"
+      sha256 "d083d1ea46bbd7477e84be79a1809eff316baacec23859b3d73a158d08e5ab3a"
 
       def install
         bin.install "gobuild"
@@ -28,17 +28,17 @@ class Gobuild < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_linux_arm64.tar.gz"
-      sha256 "26039ed441c2c82497273dec94e0cb403ad9e087d180e1f26a7b0f77048823cc"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.1/gobuild_1.7.1_linux_amd64.tar.gz"
+      sha256 "9e7bd8ef8a37e0914100bdea4bf105267b1db6a6ad5592be04de84093ccfde9d"
 
       def install
         bin.install "gobuild"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/caixw/gobuild/releases/download/v1.7.0/gobuild_1.7.0_linux_amd64.tar.gz"
-      sha256 "3618de4015c477a4c12ddf34c3a9b1572b9c98fd94e4e4d84b941664458380e4"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/caixw/gobuild/releases/download/v1.7.1/gobuild_1.7.1_linux_arm64.tar.gz"
+      sha256 "94ef9e7fe9cb5a141042326e083f460e5a0aa4d4d6046736e2ab6080a1977d55"
 
       def install
         bin.install "gobuild"
