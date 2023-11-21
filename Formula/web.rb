@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.86.0"
+  version "0.86.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.86.0/web_0.86.0_darwin_arm64.tar.gz"
-      sha256 "b81b5614288f56274950c66121c24fa80d9e068c6a6113fc486e8b85c0721261"
+      url "https://github.com/issue9/web/releases/download/v0.86.1/web_0.86.1_darwin_arm64.tar.gz"
+      sha256 "8e94708f4c49f273f993c5c4d1e14332b7cdb9dba7caa89cc1cfea757367eb6a"
 
       def install
         bin.install "web"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.86.0/web_0.86.0_darwin_amd64.tar.gz"
-      sha256 "6600485daced3c4995d1a3fc9620b871c06931e0abf3867b72c27be305190165"
+      url "https://github.com/issue9/web/releases/download/v0.86.1/web_0.86.1_darwin_amd64.tar.gz"
+      sha256 "8d5647f85220fe7d48cf597edeba79f5f26e70503f672c054646f4d34d837639"
 
       def install
         bin.install "web"
@@ -29,16 +29,16 @@ class Web < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/issue9/web/releases/download/v0.86.0/web_0.86.0_linux_arm64.tar.gz"
-      sha256 "664604489df4a89c8418a6fdd6d424f40348f1e8819a65c7d10dba1b128f331a"
+      url "https://github.com/issue9/web/releases/download/v0.86.1/web_0.86.1_linux_arm64.tar.gz"
+      sha256 "dfa6d1fd3b286e093f223ce49fa79d28a754ee2b2723066488a52fb8c28175d2"
 
       def install
         bin.install "web"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.86.0/web_0.86.0_linux_amd64.tar.gz"
-      sha256 "e32810a791b23b92b9fad432c3fa64aeb0a4fb4af20b7aa96d957d9342b230ec"
+      url "https://github.com/issue9/web/releases/download/v0.86.1/web_0.86.1_linux_amd64.tar.gz"
+      sha256 "7e63cf3aac2d9bbdd007dc00494896379577deaa590d2c144c48777923327ad4"
 
       def install
         bin.install "web"
