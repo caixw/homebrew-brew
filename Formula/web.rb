@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.90.2"
+  version "0.91.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.90.2/web_0.90.2_darwin_arm64.tar.gz"
-      sha256 "826e22398a914f82a3877fec925e754390fbab036a08743eefdcb119d709224a"
+    if Hardware::CPU.intel?
+      url "https://github.com/issue9/web/releases/download/v0.91.0/web_0.91.0_darwin_amd64.tar.gz"
+      sha256 "e8bd86a89db875fbcc9952c896ab13128a112df3b4a06371b5f81d2a75987ccf"
 
       def install
         bin.install "web"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.90.2/web_0.90.2_darwin_amd64.tar.gz"
-      sha256 "4fb6f988a9af9589893c0b21abba7810dca771035aa5740b6b1a35fe6d19b7b6"
+    if Hardware::CPU.arm?
+      url "https://github.com/issue9/web/releases/download/v0.91.0/web_0.91.0_darwin_arm64.tar.gz"
+      sha256 "1c12312c1a2b86b935a3d411bd55cdb828195c9e93fe9173e194f42facedc4a4"
 
       def install
         bin.install "web"
@@ -28,17 +28,17 @@ class Web < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/issue9/web/releases/download/v0.90.2/web_0.90.2_linux_arm64.tar.gz"
-      sha256 "038c621c74e4c5dbdb0cb09a6a2e93278e19fd8bd6aefe7036b1bffbfff6f2d1"
+    if Hardware::CPU.intel?
+      url "https://github.com/issue9/web/releases/download/v0.91.0/web_0.91.0_linux_amd64.tar.gz"
+      sha256 "c85f3d66bb5a4638466b523498704b9e7a7f2657a9d362cb8f453dc067f5f388"
 
       def install
         bin.install "web"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.90.2/web_0.90.2_linux_amd64.tar.gz"
-      sha256 "8967b357864234c4352d850781a6f498040ebcb819dd504baed1c93667d5d0fb"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/issue9/web/releases/download/v0.91.0/web_0.91.0_linux_arm64.tar.gz"
+      sha256 "0bbf8298e0b63b8533b66c52f20902674fb9893cf009060890d109a2048fecee"
 
       def install
         bin.install "web"
