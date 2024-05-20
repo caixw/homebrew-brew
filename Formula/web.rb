@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.94.2"
+  version "0.95.0"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.94.2/web_0.94.2_darwin_amd64.tar.gz"
-      sha256 "2d20b865402b9a04231f6bc538472a32afe176639b01854cf1af8c716f06d61f"
+    on_intel do
+      url "https://github.com/issue9/web/releases/download/v0.95.0/web_0.95.0_darwin_amd64.tar.gz"
+      sha256 "5b776b3ae15a18d7820e1ffa9e8b449c46be11a92e0505f24ab7b1d037e81bb1"
 
       def install
         bin.install "web"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.94.2/web_0.94.2_darwin_arm64.tar.gz"
-      sha256 "6d2408e890e684d221be77ab0bba12bdf415e6905a5ae1fae541af1a1d6ba585"
+    on_arm do
+      url "https://github.com/issue9/web/releases/download/v0.95.0/web_0.95.0_darwin_arm64.tar.gz"
+      sha256 "648f1c53bdd1a9b446306226f9c45100acdcf62590e449304de380e89f3c1ff3"
 
       def install
         bin.install "web"
@@ -28,20 +28,24 @@ class Web < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.94.2/web_0.94.2_linux_amd64.tar.gz"
-      sha256 "8d5451e087337a9a3a70dcb26fa86bb224f5dadd7b6b75bfb43dd5aa1635d3cd"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/issue9/web/releases/download/v0.95.0/web_0.95.0_linux_amd64.tar.gz"
+        sha256 "fcc27714f72900c575ba9d71877c0da636ba3c503d21dfcfec31e1e4b40a394b"
 
-      def install
-        bin.install "web"
+        def install
+          bin.install "web"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/issue9/web/releases/download/v0.94.2/web_0.94.2_linux_arm64.tar.gz"
-      sha256 "9f23aec782321f896a8b5883c60f471b346397f28f82fa37fd221d51427522c5"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/issue9/web/releases/download/v0.95.0/web_0.95.0_linux_arm64.tar.gz"
+        sha256 "a4afa1dcaade1115cd3703416de4615ca2070aef04accc97fe35bc22f76405a4"
 
-      def install
-        bin.install "web"
+        def install
+          bin.install "web"
+        end
       end
     end
   end
