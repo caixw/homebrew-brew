@@ -5,21 +5,21 @@
 class Gobuild < Formula
   desc "Go 热编译工具"
   homepage "https://github.com/caixw/gobuild"
-  version "1.8.1"
+  version "1.8.2"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/caixw/gobuild/releases/download/v1.8.1/gobuild_1.8.1_darwin_amd64.tar.gz"
-      sha256 "b49cd080b103044757fbfe1eb980d863b058e5c96a132d0a81fea87952fd6925"
+      url "https://github.com/caixw/gobuild/releases/download/v1.8.2/gobuild_1.8.2_darwin_amd64.tar.gz"
+      sha256 "402e6bbdf19129bc25f6f80a0fe13c26d6d100fa3f196fbfb79afa823df4f1cb"
 
       def install
         bin.install "gobuild"
       end
     end
     on_arm do
-      url "https://github.com/caixw/gobuild/releases/download/v1.8.1/gobuild_1.8.1_darwin_arm64.tar.gz"
-      sha256 "876e888ec5b969842c2395fdcd15d6540c315379c1a4b13d9492b9ab79f946fd"
+      url "https://github.com/caixw/gobuild/releases/download/v1.8.2/gobuild_1.8.2_darwin_arm64.tar.gz"
+      sha256 "381de91fffee130bc9b1a269a40bd19c24f21d2b47483a67e5f950d94f026f55"
 
       def install
         bin.install "gobuild"
@@ -30,8 +30,8 @@ class Gobuild < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caixw/gobuild/releases/download/v1.8.1/gobuild_1.8.1_linux_amd64.tar.gz"
-        sha256 "38bb952c31b5644b9bf776f1a26b137186a1f9836583e77534c7a756bff1feb4"
+        url "https://github.com/caixw/gobuild/releases/download/v1.8.2/gobuild_1.8.2_linux_amd64.tar.gz"
+        sha256 "1c550120d80fa7a4247e32fbf27a782a292802fe13fc0ef8fafb676a544a0e21"
 
         def install
           bin.install "gobuild"
@@ -40,8 +40,8 @@ class Gobuild < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caixw/gobuild/releases/download/v1.8.1/gobuild_1.8.1_linux_arm64.tar.gz"
-        sha256 "713954eb67485ad5145502cb052a4614f24f2a75c740a20c701d71469ad43b33"
+        url "https://github.com/caixw/gobuild/releases/download/v1.8.2/gobuild_1.8.2_linux_arm64.tar.gz"
+        sha256 "660a24bf3aebef25833273699cd3cf3aab4b350c392e09e161c53dd6d693f7f3"
 
         def install
           bin.install "gobuild"
