@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.96.3"
+  version "0.97.1"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/issue9/web/releases/download/v0.96.3/web_0.96.3_darwin_amd64.tar.gz"
-      sha256 "1f86480479771edc076b0abb79fd5763522910d0be4804996c754398c43db64b"
+      url "https://github.com/issue9/web/releases/download/v0.97.1/web_0.97.1_darwin_amd64.tar.gz"
+      sha256 "efdfa7497c91a6e877b6b477df8ed343ac36179330c7905ed061826111977705"
 
       def install
         bin.install "web"
       end
     end
     on_arm do
-      url "https://github.com/issue9/web/releases/download/v0.96.3/web_0.96.3_darwin_arm64.tar.gz"
-      sha256 "c01971162742c72f573721ded85d68b97d56fe0d0a16a56bd2bff70d745ae6f0"
+      url "https://github.com/issue9/web/releases/download/v0.97.1/web_0.97.1_darwin_arm64.tar.gz"
+      sha256 "a3ba8dfe85be06a46e6a4082bd4123a615a855056bf77fe435efea3638249b90"
 
       def install
         bin.install "web"
@@ -30,8 +30,8 @@ class Web < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.96.3/web_0.96.3_linux_amd64.tar.gz"
-        sha256 "fd2324f6d19c88a756dab12dbeafba04bd0555ac8d6986868aed1307ceaaf8bb"
+        url "https://github.com/issue9/web/releases/download/v0.97.1/web_0.97.1_linux_amd64.tar.gz"
+        sha256 "8144bf5ccf59b2ff90ebfdfb089c76ec480ddfebbdbb143f7fa11019b2ea25f2"
 
         def install
           bin.install "web"
@@ -40,8 +40,8 @@ class Web < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.96.3/web_0.96.3_linux_arm64.tar.gz"
-        sha256 "19edee94c9228ec7d34773eff52982e3f34a9294303b30c239cca1c34aeab9aa"
+        url "https://github.com/issue9/web/releases/download/v0.97.1/web_0.97.1_linux_arm64.tar.gz"
+        sha256 "106fc85abc24541b4d5c2aeb791b48ef5dc0a3f7fd48383bfbec2f189d0a9768"
 
         def install
           bin.install "web"
