@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.102.6"
+  version "0.102.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.102.6/web_0.102.6_darwin_amd64.tar.gz"
-      sha256 "727b441917f04545046c02c91ece860779a30ce30d5dcd28064691e7195e944e"
+      url "https://github.com/issue9/web/releases/download/v0.102.8/web_0.102.8_darwin_amd64.tar.gz"
+      sha256 "0ec4b82e4ea321514de81aade5364f08aeee83896b86aeae7372acda5bdd24f7"
 
       def install
         bin.install "web"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.102.6/web_0.102.6_darwin_arm64.tar.gz"
-      sha256 "1a7409b84c1b8da66dd5e506bbb692f5f7e1cffd2dc9cafaf41bdb622405ecb6"
+      url "https://github.com/issue9/web/releases/download/v0.102.8/web_0.102.8_darwin_arm64.tar.gz"
+      sha256 "b041ddaa33f97b8982d8f62c1810f9f0b8ddbe918a3ae27427a4513c4c794af6"
 
       def install
         bin.install "web"
@@ -30,8 +30,8 @@ class Web < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.102.6/web_0.102.6_linux_amd64.tar.gz"
-        sha256 "1be64c0d4899edaf03f57409f8c5b4bf9f9246fba4d0fffb21930e6e5c910019"
+        url "https://github.com/issue9/web/releases/download/v0.102.8/web_0.102.8_linux_amd64.tar.gz"
+        sha256 "a7d7ee867c771b16f14bdbbeb16ea9ace6d73b7a6b2f9a83b4d7c7ab3565feeb"
 
         def install
           bin.install "web"
@@ -40,8 +40,8 @@ class Web < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.102.6/web_0.102.6_linux_arm64.tar.gz"
-        sha256 "d2a762ed42813714ad776d281c2a09290ea600f57eeaa198121ea2382c87d2ce"
+        url "https://github.com/issue9/web/releases/download/v0.102.8/web_0.102.8_linux_arm64.tar.gz"
+        sha256 "01488654d55f345b25a71ad81a1c97df118b8d80c5a55bbce9643ce9fd13ba2d"
 
         def install
           bin.install "web"
