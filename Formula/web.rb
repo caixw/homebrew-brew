@@ -5,21 +5,21 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.102.10"
+  version "0.102.11"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.102.10/web_0.102.10_darwin_amd64.tar.gz"
-      sha256 "b4ae88ad3c9fbd98df550ead86c200276750d90f9970a17fceb0b07bb8074675"
+      url "https://github.com/issue9/web/releases/download/v0.102.11/web_0.102.11_darwin_amd64.tar.gz"
+      sha256 "06220fea9e194d4e4d9eb9597ec692c5afec6ad1f64c31ff3683d58f86d76c5f"
 
       def install
         bin.install "web"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.102.10/web_0.102.10_darwin_arm64.tar.gz"
-      sha256 "1018137351196805fda090d38a0ff03896f9b2cd986c02610f3e91305c6032e6"
+      url "https://github.com/issue9/web/releases/download/v0.102.11/web_0.102.11_darwin_arm64.tar.gz"
+      sha256 "26c1c2746c91d78ec315c67447040d0c6a90a13cd3764d0db7d2486cfb9ff039"
 
       def install
         bin.install "web"
@@ -30,8 +30,8 @@ class Web < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.102.10/web_0.102.10_linux_amd64.tar.gz"
-        sha256 "15a7a72a7a2cb7eb5e2c779ee37b739bde6d4db1cfa1822b9c4509fd97f20e87"
+        url "https://github.com/issue9/web/releases/download/v0.102.11/web_0.102.11_linux_amd64.tar.gz"
+        sha256 "3f9b28f51b15b871d9e88f7f5129593dd0d15781b637427e8b69c935fd41a736"
 
         def install
           bin.install "web"
@@ -40,8 +40,8 @@ class Web < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/issue9/web/releases/download/v0.102.10/web_0.102.10_linux_arm64.tar.gz"
-        sha256 "19fb6a52bf99c33eaaf51b153a1b1d597179e9829d443200cfb59e3deb3d3490"
+        url "https://github.com/issue9/web/releases/download/v0.102.11/web_0.102.11_linux_arm64.tar.gz"
+        sha256 "d3d59c3cef0c993caf0830405346415c4c17693ffcedc8f8234519a448b9005e"
 
         def install
           bin.install "web"
