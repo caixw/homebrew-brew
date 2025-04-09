@@ -5,21 +5,21 @@
 class Gobuild < Formula
   desc "Go 热编译工具"
   homepage "https://github.com/caixw/gobuild"
-  version "1.8.4"
+  version "1.8.5"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/caixw/gobuild/releases/download/v1.8.4/gobuild_1.8.4_darwin_amd64.tar.gz"
-      sha256 "cdad9d899e236b66ffc0aadc39c4edb01201dca81149d44273e84a09d2e8478d"
+    if Hardware::CPU.intel?
+      url "https://github.com/caixw/gobuild/releases/download/v1.8.5/gobuild_1.8.5_darwin_amd64.tar.gz"
+      sha256 "6f95169569243f929a199c51e2c170326565206e10c67197117ea08e1c06e40c"
 
       def install
         bin.install "gobuild"
       end
     end
-    on_arm do
-      url "https://github.com/caixw/gobuild/releases/download/v1.8.4/gobuild_1.8.4_darwin_arm64.tar.gz"
-      sha256 "3706a381a665bb2db209b025bc7e7bceb15a231b70e6232c4e3824a6de704984"
+    if Hardware::CPU.arm?
+      url "https://github.com/caixw/gobuild/releases/download/v1.8.5/gobuild_1.8.5_darwin_arm64.tar.gz"
+      sha256 "fbe38d652f2bec9265030d16cb1706acd0e421f6b159a5f858471b825d8b863d"
 
       def install
         bin.install "gobuild"
@@ -28,20 +28,20 @@ class Gobuild < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caixw/gobuild/releases/download/v1.8.4/gobuild_1.8.4_linux_amd64.tar.gz"
-        sha256 "3ef211ea0f57debd4faaf3cb6565c1c5a33f7b3ad728a1012352ac33f6645fb1"
+        url "https://github.com/caixw/gobuild/releases/download/v1.8.5/gobuild_1.8.5_linux_amd64.tar.gz"
+        sha256 "a44b4ff25a3766c28df24489dd0256dbd543556f0e79e4c738c0b927ac0202da"
 
         def install
           bin.install "gobuild"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/caixw/gobuild/releases/download/v1.8.4/gobuild_1.8.4_linux_arm64.tar.gz"
-        sha256 "433395ba2a3abc7f7223e0428842ff965f0eec8f82d6cc18cf91d0ead84adacf"
+        url "https://github.com/caixw/gobuild/releases/download/v1.8.5/gobuild_1.8.5_linux_arm64.tar.gz"
+        sha256 "66aae651a1173f420b48d90a036905af1bbefcf6d191a84ec5b1f073301026d8"
 
         def install
           bin.install "gobuild"
