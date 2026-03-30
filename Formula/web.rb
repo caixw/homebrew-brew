@@ -5,23 +5,23 @@
 class Web < Formula
   desc "框架 web 的辅助工具"
   homepage "https://github.com/issue9/web"
-  version "0.104.4"
+  version "0.104.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/issue9/web/releases/download/v0.104.4/web_0.104.4_darwin_amd64.tar.gz"
-      sha256 "dc373476884ca36a20afb31a838871841e1863c60be586c83207c42bb78fe154"
+      url "https://github.com/issue9/web/releases/download/v0.104.5/web_0.104.5_darwin_amd64.tar.gz"
+      sha256 "0939e15b914321ad755f1f85d1eca66f55a0683407b7988fa3ae4f87420156a9"
 
-      def install
+      define_method(:install) do
         bin.install "web"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/issue9/web/releases/download/v0.104.4/web_0.104.4_darwin_arm64.tar.gz"
-      sha256 "cc4f120651927e163c1257cc93e57227dd76439efd0f0101176327b3c3612eef"
+      url "https://github.com/issue9/web/releases/download/v0.104.5/web_0.104.5_darwin_arm64.tar.gz"
+      sha256 "39115265cbb98098eae2a5302dd314e5049dc8f3485065f696870016e6be0bed"
 
-      def install
+      define_method(:install) do
         bin.install "web"
       end
     end
@@ -29,16 +29,16 @@ class Web < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/issue9/web/releases/download/v0.104.4/web_0.104.4_linux_amd64.tar.gz"
-      sha256 "d5df944d26e5d7d6238d974cc4180db79794ed8ab8fbdcedc9cf4c7e31229dd9"
-      def install
+      url "https://github.com/issue9/web/releases/download/v0.104.5/web_0.104.5_linux_amd64.tar.gz"
+      sha256 "b5b46f7d572bfe29de814133cfcb0ad00c194225ca946904141454194512c889"
+      define_method(:install) do
         bin.install "web"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/issue9/web/releases/download/v0.104.4/web_0.104.4_linux_arm64.tar.gz"
-      sha256 "0f948bb6074daac94be0156f9a851baa485328037ca3cfa0a269b29cef6f41fd"
-      def install
+      url "https://github.com/issue9/web/releases/download/v0.104.5/web_0.104.5_linux_arm64.tar.gz"
+      sha256 "e1c9dcb3e38b0c9bbe7cb682496583cf5071b463379aa440b41ba260777c0222"
+      define_method(:install) do
         bin.install "web"
       end
     end
